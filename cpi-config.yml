@@ -1,0 +1,16 @@
+cpis:
+- name: lab
+  type: vsphere
+  properties:
+    host: 192.168.199.145
+    user: administrator@vsphere.local
+    password: VMware1!
+    datacenters:
+    - clusters:
+      - {esxi-cluster01: {}}
+      datastore_pattern: ^(VMFS02)$
+      disk_path: tutorial-disks
+      name: LAB
+      persistent_datastore_pattern: ^(VMFS02)$
+      template_folder: tutorial-templates
+      vm_folder: tutorial-vms

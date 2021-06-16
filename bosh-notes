@@ -1,0 +1,31 @@
+bosh alias-env tutorial -e 192.168.199.24 --ca-cert <(bosh int ./creds.yml --path /director_ssl/ca)
+
+bosh -e tutorial login
+
+bosh -e tutorial update-cloud-config ./cloud-config.yml
+Or,
+bosh -e tutorial update-cloud-config ./cloud-config.yml 
+bosh -e tutorial update-config --type cloud --name network-config ./network-config.yml
+
+#release
+bosh -e tutorial upload-release --sha1 7850fda50d355316c49d16a4e1c4d30227204733 "https://bosh.io/d/github.com/cloudfoundry-community/nginx-release?v=1.19.10"
+
+#stemcell
+bosh -e tutorial upload-stemcell https://bosh-core-stemcells.s3-accelerate.amazonaws.com/621.125/bosh-stemcell-621.125-vsphere-esxi-ubuntu-xenial-go_agent.tgz
+
+#deploy
+bosh -e tutorial -d nginx deploy ./nginx.yml
+
+#commands related to a deployment
+bosh -e tutorial deployments # or deps, or ds
+bosh -e tutorial -d nginx tasks --recent
+bosh -e tutorial -d nginx task 4
+bosh -e tutorial -d nginx task 4 --debug
+bosh -e tutorial -d nginx instances
+bosh -e tutorial -d nginx instances --vitals
+bosh -e tutorial -d nginx vms
+bosh -e tutorial -d nginx vms --vitals
+bosh -e tutorial -d nginx ssh nginx
+bosh -e tutorial -d nginx restart nginx
+bosh -d tutorial -d nginx recreate nginx
+bosh -e tutorial -d nginx recreate nginx

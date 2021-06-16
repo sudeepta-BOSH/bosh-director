@@ -1,0 +1,47 @@
+{
+    "director_id": "7faaf35c-c68b-473d-6317-43923f809929",
+    "installation_id": "41fe0309-e019-4569-43bd-36bccd09ae8a",
+    "current_vm_cid": "vm-74815beb-6bb7-411e-acc5-3516dcc06a77",
+    "current_stemcell_id": "021eb2f8-6ed9-476d-6247-cd5ea6272329",
+    "current_disk_id": "a68fc7c8-415d-4e53-48a1-1ca0835a4688",
+    "current_release_ids": [
+        "29bf7280-7b50-45e9-753b-ad0596a80423",
+        "78b61e1e-45f5-4e9d-7470-55b85db81692",
+        "4a7bc7de-4d29-48bc-6476-62c00fd153f9"
+    ],
+    "current_manifest_sha": "dfdbdd654da65a87cc229aca27a052df5f3d6368147e776fc635238731897c9ff03b017e16c0223a3596e4c7a5bba7fc9b8f4affa288b858fa299e2fdf0cc305",
+    "disks": [
+        {
+            "id": "a68fc7c8-415d-4e53-48a1-1ca0835a4688",
+            "cid": "disk-37336897-aaf8-4b3e-8f9a-50b991bb8846",
+            "size": 30720,
+            "cloud_properties": {}
+        }
+    ],
+    "stemcells": [
+        {
+            "id": "021eb2f8-6ed9-476d-6247-cd5ea6272329",
+            "name": "bosh-vsphere-esxi-ubuntu-bionic-go_agent",
+            "version": "1.1",
+            "api_version": 3,
+            "cid": "sc-e07b6a8d-ccb2-4caa-94e4-bb556012a7f3"
+        }
+    ],
+    "releases": [
+        {
+            "id": "29bf7280-7b50-45e9-753b-ad0596a80423",
+            "name": "bosh",
+            "version": "271.8.0"
+        },
+        {
+            "id": "78b61e1e-45f5-4e9d-7470-55b85db81692",
+            "name": "bpm",
+            "version": "1.1.12"
+        },
+        {
+            "id": "4a7bc7de-4d29-48bc-6476-62c00fd153f9",
+            "name": "bosh-vsphere-cpi",
+            "version": "59"
+        }
+    ]
+}

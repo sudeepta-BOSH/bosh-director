@@ -1,0 +1,18 @@
+bosh create-env bosh-deployment/bosh.yml \
+    --state=state.json \
+    --vars-store=creds.yml \
+    -o bosh-deployment/vsphere/cpi.yml \
+    -v director_name=tutorial-director \
+    -v internal_cidr=192.168.199.0/24 \
+    -v internal_gw=192.168.199.2 \
+    -v internal_ip=192.168.199.24 \
+    -v network_name="VM Network" \
+    -v vcenter_dc=LAB \
+    -v vcenter_ds=VMFS02 \
+    -v vcenter_ip=192.168.199.145 \
+    -v vcenter_user=administrator@vsphere.local \
+    -v vcenter_password=VMware1! \
+    -v vcenter_templates=tutorial-templates \
+    -v vcenter_vms=tutorial-vms \
+    -v vcenter_disks=tutorial-disks \
+    -v vcenter_cluster=esxi-cluster01
